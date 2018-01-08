@@ -28,8 +28,8 @@ void draw() {
   stroke(0);
   strokeWeight(1);
   
-  for(int j = -200; j< height*2; j+=5){ //iterate down the page
-    l1.set(0, j-(noise(0, j/300.0, timeSeed)*1000.0)-500.0); //reset the initial point at the start of each new line
+  for(int j = -100; j< height*2; j+=5){ //iterate down the page
+    l1.set(0, j+(noise(0, j/300.0, timeSeed)*1000.0)-500.0); //reset the initial point at the start of each new line
     for(float i = 0; i<width+40; i+=40){ //iterate across the page
       l2.set(i, j+(noise(i/300.0, j/300.0, timeSeed)*1000.0)-500.0); //set the next point in the line
       line(l1.x, l1.y, l2.x, l2.y); //draw a line from the last point to the new one
