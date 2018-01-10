@@ -37,6 +37,7 @@ void draw() {
   
   if(saveOneFrame == true) {
     endRecord();
+    version++;
     saveOneFrame = false; 
   }
 }
